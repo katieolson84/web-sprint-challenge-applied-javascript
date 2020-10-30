@@ -54,7 +54,7 @@ function cardMaker(article) {
       
     headline.addEventListener('click', function(event) {
         console.log('Clicked on Headline');
-        console.log(headline);
+        console.log(article.headline);
       })
 
       return card
@@ -71,9 +71,6 @@ function cardMaker(article) {
                 cardContainer.appendChild(cardMaker(aObj))
                 console.log(article)
             })
-            // const cards = cardMaker({articles: topics, topics: "javascript"})
-            // cardContainer.append(cards)
-            
             });
         })
         .catch(drama => {
