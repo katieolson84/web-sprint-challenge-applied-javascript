@@ -13,9 +13,9 @@
 const topicsArr = document.querySelector('.topics'
 );
 
-function tabMaker(obj) {
+function tabMaker({ topics }) {
 const tab = document.createElement('div');
-tab.textContent = `${obj.topics}`
+tab.textContent = `${topics}`
 tab.classList.add('tab');
 
 // topicsArr.append(tab);
@@ -28,7 +28,7 @@ axios.get(`https://lambda-times-api.herokuapp.com/topics`)
         const newtab = futureData.data.topics
         console.log(newtab)
         newtab.forEach(obj => {
-            const tabtopic = tabMaker(obj)
+            const tabtopic = tabMaker({topics: obj})
             // console.log(tabtopic)
             topicsArr.append(tabtopic)
         })
@@ -36,5 +36,3 @@ axios.get(`https://lambda-times-api.herokuapp.com/topics`)
     .catch(drama => {
         console.log(drama);
     })
-
-// })
