@@ -18,12 +18,9 @@ const tab = document.createElement('div');
 tab.textContent = `${obj.topics}`
 tab.classList.add('tab');
 
-console.log(tab)
-// topicsArr.appendChild(tab);
+// topicsArr.append(tab);
  return tab
 }
-
-// ${topics}forEach(topic => {
 
 axios.get(`https://lambda-times-api.herokuapp.com/topics`)
 
@@ -32,10 +29,9 @@ axios.get(`https://lambda-times-api.herokuapp.com/topics`)
         console.log(newtab)
         newtab.forEach(obj => {
             const tabtopic = tabMaker(obj)
-            console.log(tabtopic)
-            topicsArr.appendChild(tabtopic)
+            // console.log(tabtopic)
+            topicsArr.append(tabtopic)
         })
-       
     })
     .catch(drama => {
         console.log(drama);
