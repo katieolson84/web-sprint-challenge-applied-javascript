@@ -22,7 +22,7 @@
 // Use your function to create a card for each of the articles, and append each card to the DOM.
 const cardContainer = document.querySelector('.cards-container');
 
-function cardMaker({cardObj}) {
+function cardMaker(article) {
     // instantiating the elements
       const card = document.createElement('div');
       const headline = document.createElement('div');
@@ -47,9 +47,9 @@ function cardMaker({cardObj}) {
       author.appendChild(authorName);
     
     // pulling data
-      headline.textContent = cardObj.headline
-      authorImg.src = cardObj.authorPhoto
-      authorName.textContent = 'By: ' + cardObj.authorName; 
+      headline.textContent = `${article.headline}`
+      authorImg.src = `${article.authorPhoto}`
+      authorName.textContent = `By: ${article.authorName}`; 
     //   listener
       
     headline.addEventListener('click', function(event) {
@@ -61,16 +61,21 @@ function cardMaker({cardObj}) {
     }
 
     axios.get(`https://lambda-times-api.herokuapp.com/articles`)
-        .then(futureData => {
-            const newCard = futureData.data.articles;
-            console.log(newCard)
-        newCard.forEach(cardObj => {
-        const cardInfo = cardMaker({ cardObj })
-        console.log({cardInfo})
-        cardContainer.append(cardMaker)
-    })
-  })
-  .catch(drama => {
-    console.log(drama)
-  })
+        .then((futureData) => {
+            const article = futureData.data.articles;
+            // console.log(article)
 
+            Object.keys(article).forEach(obj => {
+                console.log(obj)
+            article[obj].forEach(aObj => {
+                cardContainer.appendChild(cardMaker(aObj))
+                console.log(article)
+            })
+            // const cards = cardMaker({articles: topics, topics: "javascript"})
+            // cardContainer.append(cards)
+            
+            });
+        })
+        .catch(drama => {
+        console.log(drama)
+        })
