@@ -22,48 +22,48 @@
     <div class="right-button"> > </div>
   </div>
 */
-const carouselContainer = document.querySelector('.carousel-container')
+// const carouselContainer = document.querySelector('.carousel-container')
 
-function carouselMaker() {
-  const carousel = document.createElement('div');
-  carousel.classList.add('carousel');
-  carousel.style.overflow = "hidden";
-  carousel.style.width = "90%";
-  carousel.style.boxSizing = "border-box";
-  carousel.style.transformStyle = "preserve-3d";
-
-
-    const leftbtn = document.createElement('div');
-    leftbtn.classList.add('left-button');
-    const img1 = document.createElement('img');
-    const img2 = document.createElement('img');
-    const img3 = document.createElement('img');
-    const img4 = document.createElement('img');
-    const rightbtn = document.createElement('div');
-    rightbtn.classList.add('right-button');
-    (img1, img2, img3, img4).classList.add('cimage');
+// function carouselMaker() {
+//   const carousel = document.createElement('div');
+//   carousel.classList.add('carousel');
+//   carousel.style.overflow = "hidden";
+//   carousel.style.width = "90%";
+//   carousel.style.boxSizing = "border-box";
+//   carousel.style.transformStyle = "preserve-3d";
 
 
+//     const leftbtn = document.createElement('div');
+//     leftbtn.classList.add('left-button');
+//     const img1 = document.createElement('img');
+//     const img2 = document.createElement('img');
+//     const img3 = document.createElement('img');
+//     const img4 = document.createElement('img');
+//     const rightbtn = document.createElement('div');
+//     rightbtn.classList.add('right-button');
+//     (img1, img2, img3, img4).classList.add('cimage');
 
-      ('cimage').style.position = "absolute";
-      img1.style.width = "100%";
-      img1.style.margin = "auto";
-      img1.style.padding = "1rem 4rem";
-      img1.style.zIndex = "100"
-      img1.style.transition = "transform .5s, opacity .5s, z-index .5s"
+
+
+//       ('cimage').style.position = "absolute";
+//       img1.style.width = "100%";
+//       img1.style.margin = "auto";
+//       img1.style.padding = "1rem 4rem";
+//       img1.style.zIndex = "100"
+//       img1.style.transition = "transform .5s, opacity .5s, z-index .5s"
     
-    carousel.appendChild(leftbtn);
-    carousel.appendChild(img1);
-    carousel.appendChild(img2);
-    carousel.appendChild(img3);
-    carousel.appendChild(img4);
-    carousel.appendChild(rightbtn);
+//     carousel.appendChild(leftbtn);
+//     carousel.appendChild(img1);
+//     carousel.appendChild(img2);
+//     carousel.appendChild(img3);
+//     carousel.appendChild(img4);
+//     carousel.appendChild(rightbtn);
 
-    img1.src = "https://tk-assets.lambdaschool.com/ba687af4-3a1e-43d7-87b2-f30453264c9d_mountains.jpeg"
-    img2.src = "https://tk-assets.lambdaschool.com/8aa075b0-67cf-47ce-9a7f-8cc9d754675d_computer.jpeg"
-    img3.src = "https://tk-assets.lambdaschool.com/5b7441c6-6e4b-4feb-a4ec-8dd2eb76238a_trees.jpeg"
-    img4.src = "https://tk-assets.lambdaschool.com/0b770382-d0eb-4465-8bf2-692a79fcda71_turntable.jpeg"
+//     img1.src = "https://tk-assets.lambdaschool.com/ba687af4-3a1e-43d7-87b2-f30453264c9d_mountains.jpeg"
+//     img2.src = "https://tk-assets.lambdaschool.com/8aa075b0-67cf-47ce-9a7f-8cc9d754675d_computer.jpeg"
+//     img3.src = "https://tk-assets.lambdaschool.com/5b7441c6-6e4b-4feb-a4ec-8dd2eb76238a_trees.jpeg"
+//     img4.src = "https://tk-assets.lambdaschool.com/0b770382-d0eb-4465-8bf2-692a79fcda71_turntable.jpeg"
 
-    return carouselMaker
-}
-carouselContainer.append(carouselMaker);
+//     return carouselMaker
+// }
+// carouselContainer.append(carouselMaker);
